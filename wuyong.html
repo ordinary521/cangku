@@ -487,9 +487,9 @@
     <script>
         (function() {
             // ====== 安全配置 ====在Token.html页面内生产以下值=
-const PASSWORD_HASH = "登录密码";
+const PASSWORD_HASH = "7fd9e61704fb02cf15a5d23c8d7cd077de3960d563d5320d4421d3a8ccfa37f5";
 //输入网站登录密码生成的SHA-256哈希值
-const ENCRYPTED_TOKEN = 加密对象码;
+const ENCRYPTED_TOKEN = {"iv":"8c6e96e9d066f79dfe9c1de65fd67a31cc9c163d1ebebcc2249abc32","data":"6e8a139e5a6005a8cb2b5d7ae93c73cde3d804c9b0324c3ba2a062aa25d749330a9ea8507646515a322340926a8e503c41133e767b2ea40e"};
 //输入网站登录密码和GitHubToken生成的加密对象。
 
             // ==================== 登录 & 解密引擎 ====================
@@ -557,7 +557,7 @@ const ENCRYPTED_TOKEN = 加密对象码;
 
             // ==================== 主应用 ====================
             function initApp() {
-                const OWN_USERNAME = '用户名';
+                const OWN_USERNAME = 'ordinary521';
                 //输入自己的GitHub用户名
                 const API_BASE = 'https://api.github.com';
                 const FETCH_TIMEOUT = 8000;
