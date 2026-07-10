@@ -1,4 +1,4 @@
-https://gh-proxy.com/https://raw.githubusercontent.com/ordinary521/cangku/main/images/image1.jpg
-https://gh-proxy.com/https://raw.githubusercontent.com/ordinary521/cangku/main/images/image2.jpg
-https://gh-proxy.com/https://raw.githubusercontent.com/ordinary521/cangku/main/images/image3.jpg
+https://cdn.jsdelivr.net/gh/dogsking/ordinary521/cangku/main/images/image1.jpg
+https://cdn.jsdelivr.net/gh/dogsking/ordinary521/cangku/main/images/image2.jpg
+https://cdn.jsdelivr.net/gh/dogsking/ordinary521/cangku/main/images/image3.jpg
 
