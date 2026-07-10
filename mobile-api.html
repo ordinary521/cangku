@@ -6,7 +6,7 @@
 </head>
 <script>
 // 读取存放图片列表的json地址
-let jsonUrl = "https://raw.githubusercontent.com/ordinary521/cangku/main/list-mobile.json";
+let jsonUrl = "https://gh-proxy.com/https://raw.githubusercontent.com/ordinary521/cangku/main/list-mobile.json";
 
 fetch(jsonUrl)
 .then(res => res.json())
@@ -18,7 +18,7 @@ fetch(jsonUrl)
 })
 .catch(() => {
   // 加载失败兜底图，替换成你自己的图片链接
-  window.location.href = "https://raw.githubusercontent.com/ordinary521/cangku/main/images/image1.jpg";
+  window.location.href = "https://gh-proxy.com/https://raw.githubusercontent.com/ordinary521/cangku/main/images/image1.jpg";
 })
 </script>
 <body>加载中...</body>
