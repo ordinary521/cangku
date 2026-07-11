@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>随机影视壁纸接口</title>
+</head>
+<script>
+// 读取存放图片列表的json地址
+let jsonUrl = "https://raw.githubusercontent.com/ordinary521/cangku/main/list-mobile.json";
+
+fetch(jsonUrl)
+.then(res => res.json())
+.then(data => {
+  // 随机取一张图片链接
+  let randomImg = data.wallpaper[Math.floor(Math.random() * data.wallpaper.length)];
+  // 直接跳转到图片，作为壁纸接口
+  window.location.href = randomImg;
+})
+.catch(() => {
+  // 加载失败兜底图，替换成你自己的图片链接
+  window.location.href = "https://raw.githubusercontent.com/ordinary521/cangku/main/images/image7.jpg";
+})
+</script>
+<body>加载中...</body>
+</html>
