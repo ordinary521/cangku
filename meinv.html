@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>随机壁纸</title>
+  <script>
+    // ✅ 只改这里的配置就行
+    const config = {
+      user: "ordinary521",
+      repo: "cangku",
+      branch: "main",
+      folder: "images",
+      cdn: "https://cdn.jsdelivr.net/gh/"
+    }
+
+    async function jumpRandom() {
+      try {
+        // 前端直接请求GitHub仓库的文件列表，无需后端
+        const api = await fetch(`https://api.github.com/repos/${config.user}/${config.repo}/contents/${config.folder}?ref=${config.branch}`, {
+          headers: { "Accept": "application/vnd.github.v3+json" }
+        })
+        if (!api.ok) throw new Error("加载失败")
+        const files = await api.json()
+        // 过滤出jpg/png/gif/webp图片
+        const imgList = files
+          .filter(f => f.type === 'file' && /\.(jpg|jpeg|png|webp|gif)$/i.test(f.name))
+          .map(f => `${config.cdn}${config.user}/${config.repo}@${config.branch}/${config.folder}/${f.name}`)
+        if (imgList.length === 0) throw new Error("没有图片")
+        // 随机跳转
+        const randomImg = imgList[Math.floor(Math.random() * imgList.length)]
+        location.replace(randomImg)
+      } catch (e) {
+        // 出错兜底跳公共风景图
+        location.replace("https://picsum.photos/1920/1080")
+      }
+    }
+    jumpRandom()
+  </script>
+</head>
+<body>加载壁纸中...</body>
+</html>
