@@ -12,6 +12,18 @@
             "name": "小白",
             "url": "https://api.52xiaobai.cn/api/config.php?token=dcb727f10e9a6d4dcc3977756d47fd04"
         },
+ {
+            "name": "🍃南风接口",
+            "url": "https://gh-proxy.com/raw.githubusercontent.com/yoursmile66/TVBox/refs/heads/main/XC.json"
+        },
+{
+      "name": "拾光",
+      "url": "https://4708.kstore.space/omg/hollo.json"
+    },
+    {
+      "name": "拾光短剧",
+      "url": "https://4708.kstore.space/DJ/DJ.json"
+    },
         {
             "name": "饭太硬",
             "url": "http://www.饭太硬.cc/tv"
